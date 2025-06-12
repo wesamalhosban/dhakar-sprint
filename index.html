@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ذاكر Sprint</title>
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      text-align: center;
+    }
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 20px 0;
+      font-size: 2rem;
+    }
+    main {
+      padding: 20px;
+    }
+    button {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 90%;
+      max-width: 300px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>ذاكر Sprint</header>
+  <main>
+    <button id="startSprintBtn">🔁 بدء جلسة 10 دقائق</button>
+    <button id="flashcardsBtn">📚 مراجعة بطاقاتي</button>
+    <div id="flashcardSection" class="hidden">
+  <h2>📚 بطاقاتي</h2>
+  <form id="flashcardForm">
+    <input type="text" id="question" placeholder="أدخل السؤال" required /><br /><br />
+    <input type="text" id="answer" placeholder="أدخل الإجابة" required /><br /><br />
+    <button type="submit">➕ إضافة بطاقة</button>
+  </form>
+
+  <hr />
+
+  <div id="cardsContainer"></div>
+</div>
+
+    <button id="progressBtn">⭐ تتبع التقدّم</button>
+
+    <!-- مكان محتوى الجلسة -->
+    <div id="sprintArea" class="hidden">
+      <h2>جلسة المذاكرة</h2>
+      <p id="timerDisplay">10:00</p>
+      <button id="stopSprintBtn">⏹ إيقاف الجلسة</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
